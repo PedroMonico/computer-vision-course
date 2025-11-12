@@ -1,0 +1,4 @@
+for color detection -> use HSV colorspace  (Hue Saturation Value)
+    we will define a region on the HSV colorspace
+
+    mask = cv2.inRange(hsvImage, lowerLimit, upperLimit)    (dark image with pixeis within the specified range)

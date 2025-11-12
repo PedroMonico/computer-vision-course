@@ -1,0 +1,1 @@
+asarray -> when we make a NumPy array using np.array, it creates a copy of the object array or the original array and does not reflect any changes made to the original array. Whereas on the other hand, when we try to use NumPy asarray, it would reflect all the changes made to the original array.

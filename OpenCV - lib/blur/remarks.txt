@@ -1,0 +1,10 @@
+OpenCV library to apply blur ->  https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
+
+how blurring works: averaging our image ( replacing every pixel by the average of all the other pixels which are around the pixel )
+
+Averaging: cv2.blur(img, (X,Y)), with X and Y the size of the neighborhood
+
+Gaussian Blur: cv2.GaussianBlur(img, (X, Y), z), instead of a box filter, a Gaussian kernel is used.
+
+Median Blur: cv2.medianBlur(img, x), takes the median of all the pixels under the kernel area and the central element is replaced with this median value (highly effective against salt-and-pepper noise in an image).
+

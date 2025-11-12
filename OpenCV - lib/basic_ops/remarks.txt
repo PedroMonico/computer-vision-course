@@ -1,0 +1,4 @@
+Resize an image:
+    cv2.resize(img, (H, W))
+
+Croop an image ->   cropped_img = img[:, :]     ex:. cropped_img = img[320:640, 420:840]

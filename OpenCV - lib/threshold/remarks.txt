@@ -1,0 +1,12 @@
+Threshold -> the idea is to take a image which has many different colors and convert it to a binary image. Create a segmentation algorithm, so that we will have different regions
+
+Simple Thresholding: For every pixel, the same threshold value is applied. If the pixel value is smaller than or equal to the threshold, it is set to 0, otherwise it is set to a maximum value. 
+
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    cv2.threshold(img_gray, 80, 255, cv2.THRESH_BINARY) (remark:. 80 -> simple threshold, above that (255))
+
+
+Adaptive Threshold: if an image has different lighting conditions in different areas. Te algorithm determines the threshold for a pixel based on a small region around it. So we get different thresholds for different regions of the same image which gives better results for images with varying illumination.
+
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    thresh = cv2.adaptiveThreshold(img_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 7)

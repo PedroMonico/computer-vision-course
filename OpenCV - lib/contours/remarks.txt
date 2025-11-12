@@ -1,0 +1,19 @@
+https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
+
+Contours -> a curve joining all the continuous points (along the boundary), having same color or intensity. The contours are a useful tool for shape analysis and object detection and recognition.
+
+For better accuracy, we use binary images. So before finding contours, apply threshold or canny edge detection.
+
+
+    countours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)     countours is a list where each object is a region
+
+    to list: for cnt in countours:
+                print(cv2.contourArea(cnt))
+
+    to reduce the noise: for cnt in countours:
+                            if cv2.contourArea(cnt) > 200:
+                                cv2.drawContours(img, cnt, -1, (0, 255, 0), 1)
+        or on the thresh: for cnt in countours:
+                            if cv2.contourArea(cnt) > 200:
+                                x1, y1, w, h = cv2.boundingRect(cnt)
+                                cv2.rectangle(img, (x1,y1), (x1 + w, y1 + h), (0, 255, 0), 2)

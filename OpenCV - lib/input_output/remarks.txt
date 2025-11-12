@@ -1,0 +1,15 @@
+Images -> numpy arrays
+
+    print(image.shape) -> (height, width and number of channels)
+
+    made by "pixels" (range from 0 to 255)
+
+Video  -> if video 25fps - 1/25 -> 0.04s per photo
+
+    video.release()
+    cv2.destroyAllWindows()     -> important to delete the store
+
+Webcam   ->       
+
+    if cv2.waitKey(40) & 0xFF == ord('q'): -> in case user press q, it closes the webcam
+        break

@@ -1,0 +1,11 @@
+https://docs.opencv.org/4.x/dc/da5/tutorial_py_drawing_functions.html
+
+line -> cv2.line(img_gray, (100, 150), (300, 450), (0, 255, 0), 3)    (start point, end point, color, thickness)
+
+rectangle -> cv2.rectangle(img, (200,350), (450, 600), (0, 0, 255), 5) (top left, bottom right)
+
+if thickness == -1 -> completely field
+
+circle -> cv2.circle(img, (500,550), 15, (255, 0, 0), 3)  (center, radius)
+
+text -> cv2.putText(img,'Hey!', (800, 450), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 0), 2)  (position, font, size )
